@@ -14,7 +14,6 @@ public class UserMapper {
 
     public User mapToUser(final UserDto userDto) {
         return User.builder()
-                .id(userDto.getId())
                 .name(userDto.getName())
                 .surname(userDto.getSurname())
                 .password(userDto.getPassword())
@@ -25,6 +24,7 @@ public class UserMapper {
 
     public UserDto mapToUserDto(final User user) {
         return UserDto.builder()
+                .id(user.getId())
                 .name(user.getName())
                 .surname(user.getSurname())
                 .password(user.getPassword())

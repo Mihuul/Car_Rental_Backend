@@ -4,6 +4,8 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -38,6 +40,12 @@ public class User {
     @NotNull
     @Column(name = "PHONE_NUMBER")
     private int phoneNumber;
+
+    @OneToMany(cascade = CascadeType.ALL,
+            targetEntity = Rental.class,
+            fetch = FetchType.EAGER,
+            mappedBy = "user")
+    private List<Rental> rentalList = new ArrayList<>();
 
 
 }

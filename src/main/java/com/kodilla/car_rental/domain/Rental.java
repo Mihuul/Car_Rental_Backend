@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Entity
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "RENTALS")
@@ -32,5 +33,15 @@ public class Rental {
     @NotNull
     @Column(name = "COST")
     private BigDecimal cost;
+
+    @NotNull
+    @ManyToOne
+    @JoinColumn(name = "USER_ID")
+    private User user;
+
+    @NotNull
+    @ManyToOne
+    @JoinColumn(name = "CAR_ID")
+    private Car car;
 
 }
