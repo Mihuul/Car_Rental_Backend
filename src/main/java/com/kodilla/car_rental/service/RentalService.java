@@ -26,7 +26,6 @@ import static java.time.temporal.ChronoUnit.DAYS;
 @RequiredArgsConstructor
 public class RentalService {
 
-    private final RentalMapper rentalMapper;
     private final RentalRepository rentalRepository;
     private final UserRepository userRepository;
     private final CarRepository carRepository;
@@ -64,13 +63,13 @@ public class RentalService {
         rental.setCar(car);
         rental.setRentedFrom(rentalDto.getRentedFrom());
         rental.setRentedUntil(rentalDto.getRentedFrom());
-        updateDuration(rental);
+        updateDaysRented(rental);
         updateCost(rental);
 
         return rental;
     }
 
-    public void updateDuration(Rental rental) {
+    public void updateDaysRented(Rental rental) {
         if (rental.getRentedUntil().isAfter(rental.getRentedFrom())) {
             rental.setDaysRented(DAYS.between(rental.getRentedFrom(), rental.getRentedUntil()));
         } else {

@@ -35,8 +35,8 @@ public class UserService {
         return userRepository.findByPhoneNumber(phoneNumber).orElseThrow(UserNotFoundException::new);
     }
 
-    public Boolean isEmailExist(String email) {
-        return userRepository.existsByMail(email);
+    public Boolean doesMailExist(String mail) {
+        return userRepository.existsByMail(mail);
     }
 
     public void deleteUser(Long id) {

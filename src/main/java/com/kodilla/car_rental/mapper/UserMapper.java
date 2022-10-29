@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
 public class UserMapper {
 
     public User mapToUser(final UserDto userDto) {
@@ -33,7 +32,7 @@ public class UserMapper {
                 .build();
     }
 
-    List<UserDto> mapToUserDtoList(final List<User> userList) {
+    public List<UserDto> mapToUserDtoList(final List<User> userList) {
         return userList.stream()
                 .map(this::mapToUserDto)
                 .collect(Collectors.toList());

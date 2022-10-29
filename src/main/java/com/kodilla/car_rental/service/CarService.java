@@ -25,7 +25,7 @@ public class CarService {
         return carRepository.findAll();
     }
 
-    public List<Car> getCarByBrand(final String brand) throws CarNotFoundException {
+    public List<Car> getCarsByBrand(final String brand) throws CarNotFoundException {
         return carRepository.findAllByBrand(brand);
     }
 
