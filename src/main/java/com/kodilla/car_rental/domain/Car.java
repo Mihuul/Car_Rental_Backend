@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,7 +44,7 @@ public class Car {
 
     @NotNull
     @Column(name = "DAILY_COST")
-    private double dailyCost;
+    private BigDecimal dailyCost;
 
     @NotNull
     @Column(name = "CAR_STATUS")

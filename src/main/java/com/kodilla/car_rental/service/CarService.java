@@ -25,14 +25,6 @@ public class CarService {
         return carRepository.findAll();
     }
 
-    public void deleteCar(final Long id) {
-        carRepository.deleteById(id);
-    }
-
-    public Car saveCar(final Car car) {
-        return carRepository.save(car);
-    }
-
     public List<Car> getCarByBrand(final String brand) throws CarNotFoundException {
         return carRepository.findAllByBrand(brand);
     }
@@ -51,5 +43,13 @@ public class CarService {
 
     public List<Car> getCarsByDailyCost(final double cost) {
         return carRepository.findAllByDailyCost(cost);
+    }
+
+    public void deleteCar(final Long id) {
+        carRepository.deleteById(id);
+    }
+
+    public Car saveCar(final Car car) {
+        return carRepository.save(car);
     }
 }

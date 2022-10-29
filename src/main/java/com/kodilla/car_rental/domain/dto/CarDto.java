@@ -3,6 +3,8 @@ package com.kodilla.car_rental.domain.dto;
 import com.kodilla.car_rental.domain.Status;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 
 @Getter
 @Setter
@@ -16,6 +18,6 @@ public class CarDto {
     private int productionYear;
     private int mileage;
     private String fuel;
-    private double dailyCost;
+    private BigDecimal dailyCost;
     private Status status;
 }

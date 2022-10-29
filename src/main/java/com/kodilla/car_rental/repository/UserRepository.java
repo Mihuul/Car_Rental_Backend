@@ -19,4 +19,5 @@ public interface UserRepository extends CrudRepository<User, Long> {
 
     Optional<User> findByPhoneNumber(int phoneNumber);
 
+    Boolean existsByMail(String mail);
 }

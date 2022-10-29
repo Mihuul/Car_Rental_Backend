@@ -35,6 +35,10 @@ public class UserService {
         return userRepository.findByPhoneNumber(phoneNumber).orElseThrow(UserNotFoundException::new);
     }
 
+    public Boolean isEmailExist(String email) {
+        return userRepository.existsByMail(email);
+    }
+
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
@@ -42,7 +46,6 @@ public class UserService {
     public User saveUser(final UserDto userDto) {
         return userRepository.save(userMapper.mapToUser(userDto));
     }
-
 
 }
 
