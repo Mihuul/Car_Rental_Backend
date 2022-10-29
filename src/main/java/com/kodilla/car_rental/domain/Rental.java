@@ -19,7 +19,7 @@ public class Rental {
 
     @Id
     @GeneratedValue
-    @Column(name = "ID")
+    @Column(name = "ID", unique = true)
     private Long id;
 
     @NotNull
@@ -29,6 +29,10 @@ public class Rental {
     @NotNull
     @Column(name = "RENTED_UNTIL")
     private LocalDate rentedUntil;
+
+    @NotNull
+    @Column(name = "RENTED_DAYS")
+    private Long daysRented;
 
     @NotNull
     @Column(name = "COST")
