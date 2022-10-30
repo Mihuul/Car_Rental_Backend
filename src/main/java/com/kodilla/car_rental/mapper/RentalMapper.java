@@ -2,7 +2,6 @@ package com.kodilla.car_rental.mapper;
 
 import com.kodilla.car_rental.domain.Rental;
 import com.kodilla.car_rental.domain.dto.FullRentalDto;
-import com.kodilla.car_rental.domain.dto.RentalDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -13,6 +13,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class CarDto {
     private Long id;
+    private String vin;
     private String brand;
     private String model;
     private int productionYear;

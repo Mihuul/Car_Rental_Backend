@@ -12,6 +12,7 @@ import org.hibernate.Session;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Component
@@ -47,7 +48,7 @@ public class CarFacade {
         return carMapper.mapToCarDtoList(carService.getCarsByFuelType(fuel));
     }
 
-    public List<CarDto> getCarsByDailyCost(final double cost) throws CarNotFoundException {
+    public List<CarDto> getCarsByDailyCost(final BigDecimal cost) throws CarNotFoundException {
         return carMapper.mapToCarDtoList(carService.getCarsByDailyCost(cost));
     }
 

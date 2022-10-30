@@ -23,6 +23,10 @@ public class Car {
     private Long id;
 
     @NotNull
+    @Column(name = "VIN")
+    private String vin;
+
+    @NotNull
     @Column(name = "BRAND")
     private String brand;
 

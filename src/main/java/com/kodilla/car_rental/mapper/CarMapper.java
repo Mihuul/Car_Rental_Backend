@@ -14,6 +14,7 @@ public class CarMapper {
 
     public Car mapToCar(final CarDto carDto) {
         return Car.builder()
+                .vin(carDto.getVin())
                 .brand(carDto.getBrand())
                 .model(carDto.getModel())
                 .productionYear(carDto.getProductionYear())
@@ -27,6 +28,7 @@ public class CarMapper {
     public CarDto mapToCarDto(final Car car){
         return CarDto.builder()
                 .id(car.getId())
+                .vin(car.getVin())
                 .brand(car.getBrand())
                 .model(car.getModel())
                 .productionYear(car.getProductionYear())
