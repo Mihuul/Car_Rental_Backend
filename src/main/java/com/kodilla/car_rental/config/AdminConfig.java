@@ -2,10 +2,11 @@ package com.kodilla.car_rental.config;
 
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
+
 
 @Getter
-@Component
+@Configuration
 public class AdminConfig {
 
     @Value("${admin.mail}")
