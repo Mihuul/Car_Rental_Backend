@@ -15,7 +15,6 @@ public class LoginService {
 
     private final LoginRepository loginRepository;
 
-
     public Boolean isLoginRegistered(String email, String password) {
         return loginRepository.existsByEmailAndPassword(email, password);
     }

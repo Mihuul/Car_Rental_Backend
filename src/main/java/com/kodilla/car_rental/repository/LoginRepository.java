@@ -11,7 +11,6 @@ import java.util.Optional;
 @Transactional
 public interface LoginRepository extends CrudRepository<Login, Long> {
 
-
     Boolean existsByEmailAndPassword(String email, String password);
 
     Optional<Login> findByEmailAndPassword(String email, String password);

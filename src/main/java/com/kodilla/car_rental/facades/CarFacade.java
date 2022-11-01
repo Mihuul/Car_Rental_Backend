@@ -21,8 +21,6 @@ public class CarFacade {
 
     private final CarService carService;
     private final CarMapper carMapper;
-    private final EntityManager entityManager;
-    private final CarRepository carRepository;
 
     public CarDto getCarById(final Long id) throws CarNotFoundException {
         return carMapper.mapToCarDto(carService.getCarById(id));
@@ -58,14 +56,5 @@ public class CarFacade {
 
     public void deleteCar(final Long id) {
         carService.deleteCar(id);
-    }
-
-    public Iterable<Car> findAll(boolean isDeleted) {
-        Session session = entityManager.unwrap(Session.class);
-        Filter filter = session.enableFilter("deletedCarFilter");
-        filter.setParameter("isDeleted", isDeleted);
-        Iterable<Car> cars = carRepository.findAll();
-        session.disableFilter("deletedCarFilter");
-        return cars;
     }
 }

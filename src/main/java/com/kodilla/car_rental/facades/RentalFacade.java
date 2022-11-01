@@ -38,6 +38,4 @@ public class RentalFacade {
     public void closeRental(Long id) throws RentalNotFoundException {
         rentalService.closeRental(id);
     }
-
-
 }

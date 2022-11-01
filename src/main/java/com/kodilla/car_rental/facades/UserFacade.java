@@ -44,5 +44,4 @@ public class UserFacade {
     public UserDto saveUser(final UserDto userDto) {
         return userMapper.mapToUserDto(userService.saveUser(userDto));
     }
-
 }

@@ -17,7 +17,6 @@ public class MailScheduler {
     private MailSenderService mailSenderService;
     private CreateDailyMailMessageService createDailyMailMessageService;
 
-
     //@Scheduled(cron = "*/30 * * * * *")
     @Scheduled(cron = "0 0 6 * * *")
     public void sendDailyEmail() {
@@ -26,5 +25,4 @@ public class MailScheduler {
                 SUBJECT,
                 createDailyMailMessageService.emailBodyCreate()));
     }
-
 }

@@ -14,5 +14,4 @@ public interface RentalRepository extends CrudRepository<Rental, Long> {
 
     @Override
     List<Rental> findAll();
-
 }

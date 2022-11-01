@@ -1,6 +1,5 @@
 package com.kodilla.car_rental.controller;
 
-
 import com.kodilla.car_rental.domain.dto.UserDto;
 import com.kodilla.car_rental.exception.user_exceptions.UserNotFoundException;
 import com.kodilla.car_rental.facades.UserFacade;

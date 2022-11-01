@@ -5,8 +5,6 @@ import com.kodilla.car_rental.domain.dto.VinApiDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-
-
 @Service
 @RequiredArgsConstructor
 public class VinService {
