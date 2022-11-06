@@ -1,7 +1,12 @@
 package com.kodilla.car_rental.domain.dto;
 
 import com.kodilla.car_rental.domain.Status;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 
 import java.math.BigDecimal;
 

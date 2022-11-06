@@ -1,7 +1,12 @@
 package com.kodilla.car_rental.domain.dto;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Getter
@@ -14,6 +19,7 @@ public class FullRentalDto {
     private Long id;
     private LocalDate rentedFrom;
     private LocalDate rentedUntil;
+    private BigDecimal cost;
     private Long carId;
     private String carBrand;
     private String carModel;
